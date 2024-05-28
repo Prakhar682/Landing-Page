@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Journey Junction</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        #cta-button {
+            font-size: 30px; 
+            padding: 10px 30px; 
+            background-color: #007BFF; 
+            color: white; 
+            border: none; 
+            border-radius: 5px; 
+            cursor: pointer; 
+        }
+        #cta-button:hover {
+            background-color: #0056b3; 
+        }
+
+        .carousel-images {
+            display: flex;
+            overflow-x: scroll;
+            scroll-snap-type: x mandatory;
+        }
+
+        .carousel-images img {
+            scroll-snap-align: center;
+            width: 100%;
+            height: auto;
+        }
+
+        .carousel {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+        }
+
+        .carousel-button {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 20px;
+            cursor: pointer;
+            z-index: 1;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+        }
+        #login-button {
+            font-size: 30px; /* Increase the font size */
+            padding: 10px 20px; /* Add some padding */
+            background-color: blue; /* Button background color */
+            color: white; /* Text color */
+            border: none; /* Remove default border */
+            border-radius: 5px; /* Add rounded corners */
+            cursor: pointer; /* Change cursor on hover */
+        }
+        #login-button:hover {
+            background-color: #218838; 
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <a href="#hero" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#gallery" class="nav-link">Destination</a>
+        <a href="#contact" class="nav-link">Contact</a>
+    </nav>
+
+    <div class="container">
+        <header id="hero" class="hero">
+            <h1>EXPLORE THE WORLD</h1>
+            <p>Your journey to creativity starts here.</p>
+            <button id="cta-button">Get Started</button>
+        </header>
+
+        <section id="about" class="content hidden">
+            <h2>About Us</h2>
+            <h2>EXPLORE<br />DREAM<br /><span>DESTINATION</span></h2>
+            <p> It encourages exploration of unfamiliar territories, embracing
+                diverse cultures and landscapes, while pursuing the desired
+                destination that captivates the heart and ignites a sense of wonder.
+            </p>
+        </section>
+
+        <section id="gallery" class="gallery hidden">
+            <h2>Gallery</h2>
+            <div class="carousel">
+                <button class="carousel-button prev" id="prev">‹</button>
+                <div class="carousel-images">
+                    <img src="image 1.jpg" alt="Image 1">
+                    <img src="image 2.jpg" alt="Image 2">
+                    <img src="image 3.webp" alt="Image 3">
+                </div>
+                <button class="carousel-button next" id="next">›</button>
+            </div>
+        </section>
+    </div>
+
+    <footer id="contact" class="footer hidden">
+        <p>Contact us at: <a href="journeyjunction@creativity.com">info@creativity.com</a></p>
+        <p>&copy; 2024 Creativity Inc. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
